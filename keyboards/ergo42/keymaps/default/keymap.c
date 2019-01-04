@@ -11,13 +11,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   /* BASE
    * ,------------------------------------------------.   ,------------------------------------------------.
-   * | ESC  | Tab  |   Q  |   W  |   E  |   R  |  T   |   |  Y   |   U  |   I  |   O  |   P  |   [  | Bksp |
+   * |  `   | ESC  |   Q  |   W  |   E  |   R  |  T   |   |  Y   |   U  |   I  |   O  |   P  |   -  | Bksp |
    * |------+------+------+------+------+------+------|   |-------------+------+------+------+------+------|
-   * | Del  | LCtrl|   A  |   S  |   D  |   F  |  G   |   |  H   |   J  |   K  |   L  |   ;  |   (  |  '   |
+   * | Tab  | LCtrl|   A  |   S  |   D  |   F  |  G   |   |  H   |   J  |   K  |   L  |   ;  |  [   |  '   |
    * |------+------+------+------+------+------+------|   |------|------+------+------+------+------+------|
-   * | SYMB | LSft |   Z  |   X  |   C  |   V  |  B   |   |  N   |   M  |   ,  |   .  |   /  |   )  | RSft |
+   * | SYMB | LSft |   Z  |   X  |   C  |   V  |  B   |   |  N   |   M  |   ,  |   .  |   /  |  (   |  )   |
    * |------+------+------+------+------+------+------|   |------+------+------+------+------+------+------|
-   * | LAlt | LGUI | LEFT | RIGHT| SYMB | META |Space |   | RSft |Enter |   -  |  UP  | DOWN | RGUI | RAlt |
+   * | HYPR4| LAlt | LGUI | LEFT | RIGHT| META |Space |   | RSft |Enter |  UP  | DOWN | RGUI | RAlt | RSft |
    * `------------------------------------------------'   `------------------------------------------------'
    */
   [BASE] = LAYOUT( \
@@ -29,38 +29,38 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   /* META
    * ,------------------------------------------------.   ,------------------------------------------------.
-   * |   `  |   1  |   2  |   3  |   4  |   5  |  6   |   |  7   |  8   |  9   |  0   |   -  |   =  | Bksp |
+   * |  `   | ESC  |   1  |   2  |   3  |   4  |   5  |   |      |      |      |      |  =   |  -   | Bksp |
    * |------+------+------+------+------+------+------|   |-------------+------+------+------+------+------|
-   * | Del  | LCtrl|      |      |      |      |      |   |      |      |      |      |      |  [   |  ]   |
+   * | Tab  | LCtrl|   6  |   7  |   8  |   9  |   0  |   |      |      |      |  \   |  ]   |  [   |  '   |
    * |------+------+------+------+------+------+------|   |------|------+------+------+------+------+------|
-   * | SYMB | LSft |      |      |      |      |      |   |      |      |      |  \   |  ;   |  '   | RSft |
+   * | SYMB | LSft |      |      |      |      |      |   |      |      |  ,   |  .   |  /   |  (   |  )   |
    * |------+------+------+------+------+------+------|   |------+------+------+------+------+------+------|
-   * | LAlt | LGUI |      |      | SYMB | META |Space |   | RSft |Enter |  ,   |  .   |  /   | RGUI | RAlt |
+   * | HYPR4| LAlt | LGUI | LEFT | RIGHT| META |Space |   | RSft |Enter |  UP  | DOWN | RGUI | RAlt | RSft |
    * `------------------------------------------------'   `------------------------------------------------'
    */
   [META] = LAYOUT( \
-    KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_MINS, KC_EQL,  _______, \
-    _______, _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_LBRC, KC_RBRC, \
-    _______, _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_BSLS, KC_SCLN, KC_QUOT, _______, \
-    _______, _______, XXXXXXX, XXXXXXX, _______, _______, _______, _______, _______, KC_COMM, KC_DOT,  KC_SLSH, _______, _______ \
+    _______, _______, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_EQL,  _______, _______, \
+    _______, _______, KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    XXXXXXX, XXXXXXX, XXXXXXX, KC_BSLS, KC_RBRC, _______, _______, \
+    _______, _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______, _______, _______, _______, _______, \
+    _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______ \
   ),
 
   /* SYMB
    * ,------------------------------------------------.   ,------------------------------------------------.
-   * | ESC  |  TAB |  1   |  2   |  3   |  4   |  0   |   |  F7  |  F8  |  F9  | F10  | F11  | F12  | Bksp |
+   * |   `  | Esc  |  1   |  2   |  3   |  4   |  0   |   |  F7  |  F8  |  F9  | F10  | F11  | F12  | Bksp |
    * |------+------+------+------+------+------+------|   |-------------+------+------+------+------+------|
-   * | RESET| LCtrl|  Q   |  W   |  5   |  6   |  7   |   |  F1  |  F2  |  F3  |  F4  |  F5  |  F6  | Enter|
+   * | Tab  | LCtrl|  Q   |  W   |  5   |  6   |  7   |   |  F1  |  F2  |  F3  |  F4  |  F5  |  F6  | Enter|
    * |------+------+------+------+------+------+------|   |------|------+------+------+------+------+------|
    * | SYMB | LSft |  A   |  S   |  D   |  8   |  9   |   |      |      |      |  UP  |      |      | RSft |
    * |------+------+------+------+------+------+------|   |------+------+------+------+------+------+------|
-   * | LAlt | LGUI | Space| Space| SYMB | META |Space |   | RSft |Enter | LEFT | DOWN | RIGHT| RGUI | RAlt |
+   * | HYPR4| LAlt | LGUI | Space|      | META | Space|   | RSft |Enter | LEFT | DOWN | RIGHT| RGUI | RAlt |
    * `------------------------------------------------'   `------------------------------------------------'
    */
   [SYMB] = LAYOUT( \
-    KC_ESC,   KC_TAB,  KC_1,    KC_2,    KC_3,    KC_4,    KC_0,    KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  _______, \
-    RESET,    _______, KC_Q,    KC_W,    KC_5,    KC_6,    KC_7,    KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_ENT, \
-    TO(BASE), _______, KC_A,    KC_S,    KC_D,    KC_8,    KC_9,    XXXXXXX, XXXXXXX, XXXXXXX, KC_UP,   XXXXXXX, XXXXXXX, _______, \
-    _______,  _______, KC_SPC,  KC_SPC,  _______, _______, _______, _______, XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT, _______, _______ \
+    _______, _______, KC_1,    KC_2,   KC_3,    KC_4,    KC_0,    KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  _______, \
+    _______, _______, KC_Q,    KC_W,   KC_5,    KC_6,    KC_7,    KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_ENT , \
+    _______, _______, KC_A,    KC_S,   KC_D,    KC_8,    KC_9,    XXXXXXX, XXXXXXX, XXXXXXX, KC_UP,   XXXXXXX, XXXXXXX, KC_RSFT, \
+    _______, _______, _______, KC_SPC, XXXXXXX, _______, _______, _______, _______, KC_LEFT, KC_DOWN, KC_RGHT, KC_RGUI, KC_RALT \
   )
 
 };
