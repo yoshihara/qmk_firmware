@@ -21,9 +21,9 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [BASE] = LAYOUT_ortho_3x10(
-    TD(TD_MINS_Q),  KC_W, TD(TD_COMM_DOT), KC_SPC, KC_ENT, LCMD_T(KC_M), KC_R,    KC_D,    KC_Y,    KC_P,
-    LT(SYMB, KC_A), KC_O, KC_E,            KC_I,   KC_U,   KC_G,         KC_T,    KC_K,    KC_S,    KC_N,
-    LT(NUMS, KC_Z), KC_X, KC_C,            KC_V,   KC_F,   KC_B,         KC_H,    KC_J,    KC_L,    KC_BSPC
+    TD(TD_MINS_Q),  KC_W, TD(TD_COMM_DOT), KC_SPC, KC_BSPC, LCMD_T(KC_M), KC_R,    KC_D,    KC_Y,    KC_P,
+    LT(SYMB, KC_A), KC_O, KC_E,            KC_I,   KC_U,    KC_G,         KC_T,    KC_K,    KC_S,    KC_N,
+    LT(NUMS, KC_Z), KC_X, KC_C,            KC_V,   KC_F,    KC_B,         KC_H,    KC_J,    KC_L,    KC_ENT
   ),
 
   [SYMB] = LAYOUT_ortho_3x10(
