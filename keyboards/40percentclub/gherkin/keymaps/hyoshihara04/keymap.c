@@ -3,20 +3,6 @@
 #define BASE 0
 #define NUMS 1
 
-// https://docs.qmk.fm/#/feature_tap_dance
-//Tap Dance Declarations
-enum {
-  TD_MINS_Q = 0,
-  TD_COMM_DOT = 1
-};
-
-//Tap Dance Definitions
-qk_tap_dance_action_t tap_dance_actions[] = {
-  //Tap once for comma, twice for Caps dot
-  [TD_MINS_Q]   = ACTION_TAP_DANCE_DOUBLE(KC_MINS, KC_Q),
-  [TD_COMM_DOT] = ACTION_TAP_DANCE_DOUBLE(KC_COMM, KC_DOT)
-};
-
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [BASE] = LAYOUT_ortho_3x10(
