@@ -12,9 +12,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [NUMS] = LAYOUT_ortho_3x10(
-    KC_Q,           KC_1,    KC_DOT,  KC_SPC, KC_BSPC, S(KC_1),      KC_LBRC, KC_SCOLON, S(KC_9), KC_LSFT,
-    RESET,          KC_2,    KC_3,    KC_4,   KC_5,    S(KC_SLSH),   KC_RBRC, KC_UP,     S(KC_0), KC_LCTL,
-    _______,        KC_6,    KC_7,    KC_8,   KC_9,    KC_0,         KC_LEFT, KC_DOWN,   KC_RGHT, _______
+    KC_Q,           KC_1,    KC_DOT,  UC(0x3000), KC_BSPC, S(KC_1),      KC_LBRC, KC_SCOLON, S(KC_9), KC_LSFT,
+    RESET,          KC_2,    KC_3,    KC_4,       KC_5,    S(KC_SLSH),   KC_RBRC, KC_UP,     S(KC_0), KC_LCTL,
+    _______,        KC_6,    KC_7,    KC_8,       KC_9,    KC_0,         KC_LEFT, KC_DOWN,   KC_RGHT, _______
   ),
 };
 
