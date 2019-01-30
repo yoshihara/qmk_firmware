@@ -6,15 +6,15 @@
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [BASE] = LAYOUT_ortho_3x10(
-    KC_MINS,        KC_W,    KC_COMM, KC_SPC, KC_BSPC, KC_M,         KC_R,    KC_D,      KC_Y,    KC_P,
-    KC_A,           KC_O,    KC_E,    KC_I,   KC_U,    KC_G,         KC_T,    KC_K,      KC_S,    KC_N,
-    LT(NUMS, KC_Z), KC_X,    KC_C,    KC_V,   KC_F,    LCMD_T(KC_B), KC_H,    KC_J,      KC_L,    KC_ENT
+    KC_MINS,        KC_W,    KC_COMM, KC_SPC,  KC_BSPC, KC_M,         KC_R,    KC_D,      KC_Y,    KC_P,
+    KC_A,           KC_O,    KC_E,    KC_I,    KC_U,    KC_G,         KC_T,    KC_K,      KC_S,    KC_N,
+    LT(NUMS, KC_Z), KC_X,    KC_C,    KC_V,    KC_F,    LCMD_T(KC_B), KC_H,    KC_J,      KC_L,    KC_ENT
   ),
 
   [NUMS] = LAYOUT_ortho_3x10(
-    KC_Q,           KC_1,    KC_DOT,  UC(0x3000), KC_BSPC, S(KC_1),      KC_LBRC, KC_SCOLON, S(KC_9), KC_LSFT,
-    RESET,          KC_2,    KC_3,    KC_4,       KC_5,    S(KC_SLSH),   KC_RBRC, KC_UP,     S(KC_0), KC_LCTL,
-    _______,        KC_6,    KC_7,    KC_8,       KC_9,    KC_0,         KC_LEFT, KC_DOWN,   KC_RGHT, _______
+    KC_Q,           KC_1,    KC_DOT,  _______, _______, S(KC_1),      KC_LBRC, KC_SCOLON, S(KC_9), KC_LSFT,
+    RESET,          KC_2,    KC_3,    KC_4,    KC_5,    S(KC_SLSH),   KC_RBRC, KC_UP,     S(KC_0), KC_LCTL,
+    _______,        KC_6,    KC_7,    KC_8,    KC_9,    KC_0,         KC_LEFT, KC_DOWN,   KC_RGHT, _______
   ),
 };
 
