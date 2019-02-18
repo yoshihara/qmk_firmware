@@ -75,66 +75,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define NO_ACTION_MACRO
 //#define NO_ACTION_FUNCTION
 
-#undef B0
-#undef B1
-#undef B2
-#undef B3
-#undef B4
-#undef B5
-#undef B6
-#undef C6
-#undef D0
-#undef D1
-#undef D2
-#undef D3
-#undef D4
-#undef D7
-#undef E6
-#undef F4
-#undef F5
-#undef F6
-#undef F7
-
-#define D3 PIN1
-#define D2 PIN2
-#define D1 PIN5
-#define D0 PIN6
-#define D4 PIN7
-#define C6 PIN8
-#define D7 PIN9
-#define E6 PIN10
-#define B4 PIN11
-#define B5 PIN12
-#define B6 PIN13
-#define B2 PIN14
-#define B3 PIN15
-#define B1 PIN16
-#define F7 PIN17
-#define F6 PIN18
-#define F5 PIN19
-#define F4 PIN20
-
-#define MATRIX_ROW_PINS { D3, D1, D4, E6, B5, D2, F6, B3, B2, B6 }
-#define MATRIX_COL_PINS { D0, B4, C6, D7, F4, F5, F7 }
-#define UNUSED_PINS
-
-/* COL2ROW, ROW2COL, or CUSTOM_MATRIX */
-#define DIODE_DIRECTION COL2ROW
-
-/* ws2812 RGB LED */
-#define RGB_DI_PIN B1
-#define RGBLIGHT_TIMER
-#define RGBLED_NUM 4
-#define ws2812_PORTREG  PORTB
-#define ws2812_DDRREG   DDRB
-
-#define RGBLIGHT_HUE_STEP 10
-#define RGBLIGHT_SAT_STEP 17
-
-#define RGBLIGHT_ANIMATIONS
-
-
-
 /* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
 #define DEBOUNCING_DELAY 5
 
