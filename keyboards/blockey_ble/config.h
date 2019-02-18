@@ -75,6 +75,19 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define NO_ACTION_MACRO
 //#define NO_ACTION_FUNCTION
 
+/* ws2812 RGB LED */
+#define RGB_DI_PIN PIN16
+#define RGBLIGHT_TIMER
+#define RGBLED_NUM 4
+#define ws2812_PORTREG  PORTB
+#define ws2812_DDRREG   DDRB
+
+#define RGBLIGHT_HUE_STEP 10
+#define RGBLIGHT_SAT_STEP 17
+
+#define RGBLIGHT_ANIMATIONS
+
+
 /* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
 #define DEBOUNCING_DELAY 5
 
