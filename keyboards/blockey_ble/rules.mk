@@ -1,6 +1,6 @@
 SRC += ws2812.c
 
-DEFAULT_FOLDER = blockey_ble/pro_v1
+DEFAULT_FOLDER = blockey_ble/rev1
 
 NRF_DEBUG = no
 
