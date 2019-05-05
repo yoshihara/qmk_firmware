@@ -25,16 +25,16 @@ enum Layer
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [DF] = LAYOUT(
-              LGUI(KC_Z), KC_B, KC_S, LT(LW, KC_SPC),
-              SGUI(KC_Z), KC_E, KC_V, LT(RS, KC_C)
+              LGUI(KC_Z), KC_B, KC_E,       LT(LW, KC_SPC),
+              SGUI(KC_Z), KC_S, LGUI(KC_D), LT(RS, KC_V)
               ),
 [LW]= LAYOUT(
-             KC_L,       LSFT(KC_RBRC), LGUI(KC_RBRC), _______,
-             LGUI(KC_D), LSFT(KC_LBRC), LGUI(KC_LBRC), _______
+             KC_L,       KC_RBRC,    LGUI(KC_RBRC), _______,
+             LGUI(KC_X), LGUI(KC_C), LGUI(KC_V),    _______
              ),
 [RS]= LAYOUT(
-             LGUI(KC_C), LGUI(KC_X), XXXXXXX, _______,
-             KC_X      , LGUI(KC_V), KC_LALT, _______
+             KC_C, KC_LBRC,    LGUI(KC_LBRC), _______,
+             KC_X, LGUI(KC_K), KC_LALT,       _______
              )
 
 };
