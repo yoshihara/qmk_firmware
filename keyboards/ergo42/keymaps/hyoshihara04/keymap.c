@@ -15,10 +15,10 @@ extern keymap_config_t keymap_config;
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [BASE] = LAYOUT( \
-    KC_TAB,  KC_Q,    KC_W,    KC_E,     KC_R,     KC_T,   S(KC_1), /* | */  KC_Y,      KC_U,       KC_I,       KC_O,       KC_P,      KC_EQL,  KC_BSPC, \
-    KC_LCTL, KC_A,    KC_S,    KC_D,     KC_F,     KC_G,   S(KC_2), /* | */  KC_H,      KC_J,       KC_K,       KC_L,       KC_SCLN,   KC_LBRC, KC_RBRC, \
-    KC_LSFT, KC_Z,    KC_X,    KC_C,     KC_V,     KC_B,   S(KC_3), /* | */  KC_N,      KC_M,       KC_COMM,    KC_DOT,     KC_SLSH,   KC_UP,   TO(SYMB), \
-    KC_SCST, KC_LALT, KC_LGUI, KC_ESC,   MO(META), KC_SPC, S(KC_4), /* | */  MO(META),  KC_ENT,     KC_RSFT,    KC_RGUI,    KC_LEFT,   KC_DOWN, KC_RGHT \
+    KC_TAB,  KC_Q,   KC_W,    KC_E,     KC_R,     KC_T,   S(KC_1), /* | */  KC_Y,      KC_U,       KC_I,       KC_O,       KC_P,      KC_EQL,  KC_BSPC, \
+    KC_LCTL, KC_A,   KC_S,    KC_D,     KC_F,     KC_G,   S(KC_2), /* | */  KC_H,      KC_J,        KC_K,       KC_L,       KC_SCLN,   KC_LBRC, KC_RBRC, \
+    KC_LSFT, KC_Z,   KC_X,    KC_C,     KC_V,     KC_B,   S(KC_3), /* | */  KC_N,      KC_M,       KC_COMM,    KC_DOT,     KC_SLSH,   KC_UP,   TO(SYMB), \
+    KC_SCST, KC_ESC, KC_LALT, KC_LGUI,  MO(META), KC_SPC, S(KC_4), /* | */  MO(META),  KC_ENT,     KC_RSFT,    KC_RGUI,    KC_LEFT,   KC_DOWN, KC_RGHT \
   ),
 
   [META] = LAYOUT( \
