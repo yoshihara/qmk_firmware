@@ -38,19 +38,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    /* 小指 人差し指 */
    /* 親指 */
   [BASE] = LAYOUT( /* Base */
-    KC_C,    KC_E, \
-    LT_REDO, KC_B, \
-    LT_UNDO \
+    LT_UNDO, KC_B, KC_E, KC_C, LT_REDO \
   ),
   [MENU] = LAYOUT( /* other tool and MENU */
-    KC_L,    KC_LALT, \
-    _______, KC_SPC, \
-    _______ \
+    _______, KC_SPC, KC_LALT, KC_L, _______ \
   ),
   [EDIT] = LAYOUT( /* Edit (cut&copy&paste) */
-    LGUI(KC_X),    LGUI(KC_V), \
-    _______, LGUI(KC_C), \
-    _______ \
+    _______, LGUI(KC_C), LGUI(KC_V), LGUI(KC_X), _______ \
   )
 };
 
