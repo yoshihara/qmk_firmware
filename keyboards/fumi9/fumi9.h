@@ -26,10 +26,10 @@
  * represents the switch matrix.
  */
 #define LAYOUT( \
-      k20, k11, k01, k00, k10 \
+    k00, k01, k02, k10, k11 \
 ) \
 { \
-    { k00, k01   }, \
-    { k10, k11   }, \
-    { KC_NO,k20 }, \
+    { k10,  k02 }, \
+    { k11,  k01 }, \
+    { KC_NO,k00 }, \
 }

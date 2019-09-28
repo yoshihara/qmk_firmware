@@ -15,82 +15,19 @@
  */
 #include QMK_KEYBOARD_H
 
-enum Layer
-{
-	BASE,
-        EDIT,
-        MENU
-};
-
 // Defines the keycodes used by our macros in process_record_user
 enum custom_keycodes {
-  LT_REDO = SAFE_RANGE,
-  LT_UNDO
+  QMKBEST = SAFE_RANGE,
+  QMKURL
 };
 
-static bool redo_pressed = false;
-#define REDO_LAYER EDIT // redoを押しっぱにしたときに移動するレイヤー
-static bool undo_pressed = false;
-#define UNDO_LAYER MENU // undoを押しっぱにしたときに移動するレイヤー
-
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-   /* 薬指 中指 */
-   /* 小指 人差し指 */
-   /* 親指 */
-  [BASE] = LAYOUT( /* Base */
-    LT_UNDO, KC_B, KC_E, KC_C, LT_REDO \
+  [0] = LAYOUT( /* Base */
+    KC_A, KC_B, KC_C, KC_D, KC_E
   ),
-  [MENU] = LAYOUT( /* other tool and MENU */
-    _______, KC_SPC, KC_LALT, KC_L, _______ \
-  ),
-  [EDIT] = LAYOUT( /* Edit (cut&copy&paste) */
-    _______, LGUI(KC_C), LGUI(KC_V), LGUI(KC_X), _______ \
-  )
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-  // c.f. http://okapies.hateblo.jp/entry/2019/02/02/133953
-  switch (keycode) {
-    case LT_REDO:
-      // 他のキーが押されたらLT、単独ならredo
-      if (record->event.pressed) {
-        redo_pressed = true;
-
-        layer_on(REDO_LAYER);
-      } else {
-        layer_off(REDO_LAYER);
-
-        if (redo_pressed) {
-          SEND_STRING(SS_LGUI(SS_LSFT("z")));
-        }
-        redo_pressed = false;
-      }
-      return false;
-      break;
-    case LT_UNDO:
-      // 他のキーが押されたらLT、単独ならundo
-      if (record->event.pressed) {
-        undo_pressed = true;
-
-        layer_on(UNDO_LAYER);
-      } else {
-        layer_off(UNDO_LAYER);
-
-        if (undo_pressed) {
-          SEND_STRING(SS_LGUI("z"));
-        }
-        undo_pressed = false;
-      }
-      return false;
-      break;
-    default:
-      if (record->event.pressed) {
-        // reset the flag
-        redo_pressed = false;
-        undo_pressed = false;
-      }
-      break;
-  }
   return true;
 }
 

@@ -1,11 +1,11 @@
 # fumi9
 
-# TODO
+![fumi9](imgur.com image replace me!)
 
 A short description of the keyboard/project
 
-Keyboard Maintainer: [yoshihara](https://github.com/yoshihara)
-Hardware Supported: The PCBs, controllers supported
+Keyboard Maintainer: [yoshihara](https://github.com/yourusername)  
+Hardware Supported: The PCBs, controllers supported  
 Hardware Availability: links to where you can find this hardware
 
 Make example for this keyboard (after setting up your build environment):
